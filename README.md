@@ -1,12 +1,12 @@
 # Replication Package of Task-Oriented ML/DL Library Recommendation based on Knowledge Graph
 ## Empirical Study
-- [1000 ML/DL related posts.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/empirical_study/empirical_data_sample.xlsx)
+- [1000 ML/DL Related Posts.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/empirical_study/empirical_data_sample.xlsx)
 This csv file contains 1000 questions randomly selected from the Stack Overflow data dump meeting all 
 the criteria in the paper. In the csv file, the column “Title” represents the title of corresponding 
 post, “Url” represents Stack Overflow url for posts, “Annotator_1” represents the annotation of the 
 first annotator, “Annotator_2” represents the annotator of the second annotator.
 
-- [task and factor analysis of 283 posts.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/empirical_study/empirical_data_annotation.xlsx)
+- [Task and Factor Analysis of 283 Posts.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/empirical_study/empirical_data_annotation.xlsx)
 This file contains 283 posts from 1000 posts which both annotators labeled true for seeking ML/DL 
 libraries. In the csv file, “Title” represents the title of corresponding post, “Url” represents 
 Stack Overflow url for posts, “Accepted answer” represents whether the post has accepted answer or not.
