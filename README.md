@@ -41,3 +41,4 @@ on a 4-points Likert scale (1- disagree; 2-somewhat disagree;
 3-somewhat agree; 4-agree). Finally, we measured satisfaction and 
 completion time and plotted a box chart.
 
+It is hereby stated that due to anonymity, some information is hidden and will be disclosed in the future.
