@@ -19,13 +19,13 @@ two annotators.
 - We extract implementation knowledge from ReadMe files using some 
 predefined patterns.
 
-<sub>
-| Knowledge Type | Definition | Pattern Description | Example |
-| Third-Party Library | dependencies of third-party Libraries | First, converting the ReadMe text into HTML format. Then, using Xpath matches all the <li> tag under the first or second sibling node after the <h> tag that contains one of the keywords "requirement"/"dependency"/"dependencies"/"environment"/"prerequisite" Label node. Then, for the content of each <li> tag, use regular expressions to extract the Third-Party Library and its corresponding version number | ### Requirements  * python 3.6  * Pytorch >= 1.0.0  * CUDA >= 9.0 |
-| Release Package | the release package of the current implementation |  |  |
-| Trained Model | an instantiated ML/DL model trained using the implementation and certain dataset, which can be used directly |  |  |
-| Command | commands that can be used to run the implementation |  |  |
-</sub>
+
+| <sub>Knowledge Type</sub> | <sub>Definition</sub> | <sub>Pattern Description</sub> | <sub>Example</sub> |
+| <sub>Third-Party Library</sub> | <sub>dependencies of third-party Libraries</sub> | <sub>First, converting the ReadMe text into HTML format. Then, using Xpath matches all the <li> tag under the first or second sibling node after the <h> tag that contains one of the keywords "requirement"/"dependency"/"dependencies"/"environment"/"prerequisite" Label node. Then, for the content of each <li> tag, use regular expressions to extract the Third-Party Library and its corresponding version number</sub> | <sub>### Requirements  * python 3.6  * Pytorch >= 1.0.0  * CUDA >= 9.0</sub> |
+| <sub>Release Package</sub> | <sub>the release package of the current implementation</sub> | <sub></sub> |  |
+| <sub>Trained Model</sub> | <sub>an instantiated ML/DL model trained using the implementation and certain dataset, which can be used directly</sub> |  |  |
+| <sub>Command</sub> | <sub>commands that can be used to run the implementation</sub> |  |  |
+
 
 
 ## Resulting KG
