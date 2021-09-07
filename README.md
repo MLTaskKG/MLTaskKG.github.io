@@ -19,17 +19,13 @@ two annotators.
 - We extract implementation knowledge from ReadMe files using some 
 predefined patterns.
 
+<sub>
 | Knowledge Type | Definition | Pattern Description | Example |
-| Third-Party Library | dependencies of third-party Libraries | First, converting the ReadMe text into HTML format. Then, using Xpath matches all the <li> tag under the first or second sibling node after the <h> tag that contains one of the keywords "requirement"/"dependency"/"dependencies"/"environment"/"prerequisite" Label node. Then, for the content of each <li> tag, use regular expressions to extract the Third-Party Library and its corresponding version number | ### Requirements
-
-* python 3.6
-* Pytorch >= 1.0.0
-* CUDA >= 9.0 |
+| Third-Party Library | dependencies of third-party Libraries | First, converting the ReadMe text into HTML format. Then, using Xpath matches all the <li> tag under the first or second sibling node after the <h> tag that contains one of the keywords "requirement"/"dependency"/"dependencies"/"environment"/"prerequisite" Label node. Then, for the content of each <li> tag, use regular expressions to extract the Third-Party Library and its corresponding version number | ### Requirements  * python 3.6  * Pytorch >= 1.0.0  * CUDA >= 9.0 |
 | Release Package | the release package of the current implementation |  |  |
-| Trained Model | an instantiated ML/DL model trained using
-the implementation and certain dataset, which can be used
-directly |  |  |
+| Trained Model | an instantiated ML/DL model trained using the implementation and certain dataset, which can be used directly |  |  |
 | Command | commands that can be used to run the implementation |  |  |
+</sub>
 
 
 ## Resulting KG
@@ -56,10 +52,10 @@ We evaluate the effectiveness of MLTaskKG by conducting a human
 study. In the study we ask a set of participants to use MLTaskKG to
 find suitable ML/DL libraries for given AI tasks and use 
 PapersWithCode as a baseline for comparison. 
-    - [ML/DL Library Retrieval Tasks](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ3/Tasks.docx).
+    - [ML/DL Library Retrieval Tasks.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ3/Tasks.docx)
 We randomly select eight questions aimed at seeking for ML/DL libraries from our
 empirical study data and adapt them into eight ML/DL library retrieval tasks.
-    - [Experiment Design](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ3)
+    - [Experiment Design.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ3)
 We invite 10 MS students to participate and divide
 them into two “equivalent” participant groups (PA and PB).
 On the other hand, we randomly divide the eight
