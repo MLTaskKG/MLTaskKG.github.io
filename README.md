@@ -16,20 +16,47 @@ category of the task, “Resource type” describes whether askers first want is
 two annotators.
 
 ## Pattern Description
-- We extract implementation knowledge from ReadMe files using some 
-predefined patterns.
+We summarize a set of patterns for the extraction of the following
+knowledge from ReadMe files.
+- Third-Party Library: dependencies of third-party Libraries.
+    - Pattern Description: First, converting the ReadMe text into HTML format. Then, using Xpath to matche all the \<li\> tag under the first or second sibling node after the \<h\> tag that contains one of the keywords ("requirement", "dependency", "dependencies", "environment", "prerequisite") Label node. Then, for the content of each \<li\> tag, use regular expressions to extract the Third-Party Library and its corresponding version number.
+    - Example:
+    
+        ```
+        Requirements
+            python 3.6
+            Pytorch >= 1.0.0
+            CUDA >= 9.0
+        ```
+    
+- Release Package: the release package of the current implementation.
+    - Pattern Description: First, convert the ReadMe text into HTML format. Then, the alt attribute text of the \<img\> under the \<a\> tag must contain one of the keywords ("release", "pypi"). Then extract the hyperlink in the matched \<a\> tag as the address of Release Package.
+    - Example: 
+    
+        ```
+         pypi package 2.6.0
+        ```
 
+- Trained Model: an instantiated ML/DL model trained using the implementation and certain dataset, which can be used directly.
+    - Pattern Description: First, convert the ReadMe text into HTML format. Then, using Xpath to matche on the \<p\> and \<li\> tags. The text of the \<p\> or \<li\> tag must contain one of the keywords ("model", "weight"). At the same time, one of the keywords ("download", "dump", "available", "be found") must also be included. Then, extract the hyperlinks as the download address of the Trained Model from the content in the matched \<p\> and \<li\> tags.
+    - Example:
 
-| <sub>Knowledge Type</sub> | <sub>Definition</sub> | <sub>Pattern Description</sub> | <sub>Example</sub> |
-| <sub>Third-Party Library</sub> | <sub>dependencies of third-party Libraries</sub> | <sub>First, converting the ReadMe text into HTML format. Then, using Xpath matches all the <li> tag under the first or second sibling node after the <h> tag that contains one of the keywords "requirement"/"dependency"/"dependencies"/"environment"/"prerequisite" Label node. Then, for the content of each <li> tag, use regular expressions to extract the Third-Party Library and its corresponding version number</sub> | <sub>### Requirements  * python 3.6  * Pytorch >= 1.0.0  * CUDA >= 9.0</sub> |
-| <sub>Release Package</sub> | <sub>the release package of the current implementation</sub> | <sub></sub> |  |
-| <sub>Trained Model</sub> | <sub>an instantiated ML/DL model trained using the implementation and certain dataset, which can be used directly</sub> |  |  |
-| <sub>Command</sub> | <sub>commands that can be used to run the implementation</sub> |  |  |
+        ```
+        The pretrained Model is available at here.
+        ```
+        
+- Command: commands that can be used to run the implementation.
+    - Pattern Description: First, convert the ReadMe text into HTML format. Then, using Xpath to matche all \<pre\> or \<blockquote\> tags as Command, and the first sibling node before it as the description of Command. Next, using keyword matching on the description corresponding to each Command, and classify the Commands into preprocess_command, train_command, test_command, usage_command.
+    - Example:
 
+        ```
+        To train the model run,
+        python train.py
+        ```
 
 
 ## Resulting KG
-- The resulting AI task-model KG includes 159,310 entities and 628,045
+The resulting AI task-model KG includes 159,310 entities and 628,045
 relationships. The entities include 17,250 tasks, 25,404 papers, 25,718
 models, 21,003 model implementations, and 24,047 repositories. The relationships 
 include 17,410 subclassOf relationships between tasks, 44,438 accomplish 
@@ -37,7 +64,7 @@ relationships, 20,594 hasEvaluation relationships, 29,281 implement relationship
 21,008 provide relationships, 60,040 basedOn relationships, and 105,963
 support relationships.
 
-    The complete data of the resulted KG will be disclosed in case of accepted. 
+The complete data of the resulted KG will be disclosed in case of accepted. 
 
 ## Experiments
 - [RQ2: Trends of AI Tasks and Implementations Analysis.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ2/)
