@@ -16,44 +16,9 @@ category of the task, “Resource type” describes whether askers first want is
 two annotators.
 
 ## Pattern Description
-We summarize a set of patterns for the extraction of the following
-knowledge from ReadMe files.
-- Third-Party Library: dependencies of third-party Libraries.
-    - Pattern Description: First, converting the ReadMe text into HTML format. Then, using Xpath to matche all the \<li\> tag under the first or second sibling node after the \<h\> tag that contains one of the keywords ("requirement", "dependency", "dependencies", "environment", "prerequisite") Label node. Then, for the content of each \<li\> tag, use regular expressions to extract the Third-Party Library and its corresponding version number.
-    - Example:
-    
-        ```
-        Requirements
-            python 3.6
-            Pytorch >= 1.0.0
-            CUDA >= 9.0
-        ```
-    
-- Release Package: the release package of the current implementation.
-    - Pattern Description: First, convert the ReadMe text into HTML format. Then, the alt attribute text of the \<img\> under the \<a\> tag must contain one of the keywords ("release", "pypi"). Then extract the hyperlink in the matched \<a\> tag as the address of Release Package.
-    - Example: 
-    
-        ```
-         pypi package 2.6.0
-        ```
-
-- Trained Model: an instantiated ML/DL model trained using the implementation and certain dataset, which can be used directly.
-    - Pattern Description: First, convert the ReadMe text into HTML format. Then, using Xpath to matche on the \<p\> and \<li\> tags. The text of the \<p\> or \<li\> tag must contain one of the keywords ("model", "weight"). At the same time, one of the keywords ("download", "dump", "available", "be found") must also be included. Then, extract the hyperlinks as the download address of the Trained Model from the content in the matched \<p\> and \<li\> tags.
-    - Example:
-
-        ```
-        The pretrained Model is available at here.
-        ```
-        
-- Command: commands that can be used to run the implementation.
-    - Pattern Description: First, convert the ReadMe text into HTML format. Then, using Xpath to matche all \<pre\> or \<blockquote\> tags as Command, and the first sibling node before it as the description of Command. Next, using keyword matching on the description corresponding to each Command, and classify the Commands into preprocess_command, train_command, test_command, usage_command.
-    - Example:
-
-        ```
-        To train the model run,
-        python train.py
-        ```
-
+- [Complete List and Descriptions of the Patterns.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/pattern_description.xlsx)
+We summarize a set of patterns for the extraction of the some implementation knowledge from ReadMe files.
+These patterns involve not only linguistic patterns in the text but also the section structure, hyperlinks, and code blocks of the ReadMe file. 
 
 ## Resulting KG
 The resulting AI task-model KG includes 159,310 entities and 628,045
@@ -74,7 +39,7 @@ analysis can help application developers to have an overview of the implementing
 repositories for different AI tasks and the emergence of new ML/DL models and
 implementations for specific AI tasks.
 
-- [RQ3: AI Task-Model KG Effectiveness Evaluation.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ3)
+- [RQ3: AI Task-Model KG Effectiveness Evaluation.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ3/)
 We evaluate the effectiveness of MLTaskKG by conducting a human
 study. In the study we ask a set of participants to use MLTaskKG to
 find suitable ML/DL libraries for given AI tasks and use 
@@ -82,7 +47,7 @@ PapersWithCode as a baseline for comparison.
     - [ML/DL Library Retrieval Tasks.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ3/Tasks.docx)
 We randomly select eight questions aimed at seeking for ML/DL libraries from our
 empirical study data and adapt them into eight ML/DL library retrieval tasks.
-    - [Experiment Design.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ3)
+    - [Experiment Design.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ3/)
 We invite 10 MS students to participate and divide
 them into two “equivalent” participant groups (PA and PB).
 On the other hand, we randomly divide the eight
