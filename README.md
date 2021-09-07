@@ -17,7 +17,7 @@ two annotators.
 
 ## Pattern Description
 - [Complete List and Descriptions of the Patterns.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/pattern_description.xlsx)
-We summarize a set of patterns for the extraction of the some implementation knowledge from ReadMe files.
+We summarize a set of patterns for the extraction of some implementation knowledge from ReadMe files.
 These patterns involve not only linguistic patterns in the text but also the section structure, hyperlinks, and code blocks of the ReadMe file. 
 
 ## Resulting KG
