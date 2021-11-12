@@ -67,6 +67,8 @@ as the result and completion time for each task. After that, We invite
 another 4 MS students to assess the satisfaction of each submitted result 
 on a 4-points Likert scale (1- disagree; 2-somewhat disagree; 
 3-somewhat agree; 4-agree). Finally, we measured satisfaction and 
-completion time and drew a box plot.
+completion time and drew a box plot. 
+    - [Results of Satisfaction Statistics.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ3/Satisfaction_Number_Statistics.xlsx)
+We summarize satisfaction of each submitted result using MLTaskKG and PapersWithCode.
 
 It is hereby stated that due to anonymity, some information is hidden and will be disclosed in the future.
