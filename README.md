@@ -32,6 +32,15 @@ support relationships.
 The complete data of the resulted KG will be disclosed in case of accepted. 
 
 ## Experiments
+- [RQ1: Intrinsic Quality of Knowledge Graph.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ1/)
+    - [384 tuples in the KG.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ1/KG_tuples_for_intrinsic_quality_evaluation.xlsx)
+We randomly sample 384 tuples from the KG and ensure that each type of relationships and attributes has at least 20 tuples selected. 
+The "Start entity" represents the start node of the relation, "End entity" represents the end node of the relation, 
+"Auxiliary" is used to help annotators label easier, “Annotator_1” represents the annotation of the first annotator, “Annotator_2” 
+represents the annotator of the second annotator, "Arbitration" represents the arbitration between two annotators. 
+    - [Accuracy per tuple type.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ1/Accuracy_per_triple_type.xlsx)
+The statistic results of accuracy per tuple type is shown here.
+
 - [RQ2: Trends of AI Tasks and Implementations Analysis.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ2/)
 MLTaskKG links AI tasks, ML/DL models, and their implementations in a knowledge 
 graph, thus we analyze the trends of AI tasks and their implementations. The 
