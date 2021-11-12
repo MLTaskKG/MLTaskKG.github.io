@@ -38,7 +38,7 @@ We randomly sample 384 tuples from the KG and ensure that each type of relations
 The "Start entity" represents the start node of the relation, "End entity" represents the end node of the relation, 
 "Auxiliary" is used to help annotators label easier, “Annotator_1” represents the annotation of the first annotator, “Annotator_2” 
 represents the annotator of the second annotator, "Arbitration" represents the arbitration between two annotators. 
-    - [Accuracy per tuple type.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ1/Accuracy_per_triple_type.xlsx)
+    - [Accuracy per tuple type.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ1/Accuracy_per_tuple_type.xlsx)
 The statistic results of accuracy per tuple type is shown here.
 
 - [RQ2: Trends of AI Tasks and Implementations Analysis.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ2/)
