@@ -15,10 +15,26 @@ category of the task, “Resource type” describes whether askers first want is
 “Factor” represents 11 main factors contained in the post. All these four columns are arbitration of 
 two annotators.
 
+## Task Categories
+- [Task Categories of PapersWithCode.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/task_categories.json)
+This json file contains the task categories we collected from PapersWithCode. 
+
 ## Pattern Description
 - [Complete List and Descriptions of the Patterns.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/pattern_description.xlsx)
 We summarize a set of patterns for the extraction of some implementation knowledge from ReadMe files.
 These patterns involve not only linguistic patterns in the text but also the section structure, hyperlinks, and code blocks of the ReadMe file. 
+
+## KG Construction
+[The Module of Knowledge Graph Construction.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/kg_construction/)
+This module is used to construct knowledge graph, including the definition of entity relation, generation of entity relation and construction of knowledge graph.
+- [The Definition of Entity Relation.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/kg_construction/entity_relation_category.py)
+This code file defines all the entity categories and relation categories in the knowledge graph. This is the first step in building the knowledge graph.
+
+- [The Generation of Entity Relation.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/kg_construction/entity_relation_generator.py)
+Based on the definition of entity relation, this code file implements the generation of all pre-defined entity and relation triples. We have implemented different functions to generate entity information for different entities.
+
+- [The Construction of Knowledge Graph.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/kg_construction/kg_constructor.py)
+Based on the entity and relation data generated in the previous step, this code file implements the construction of the knowledge graph. It mainly includes the import of various entities and relation building, and finally generates the AI task-model knowledge graph.
 
 ## Resulting KG
 The resulting AI task-model KG includes 159,310 entities and 628,045
@@ -31,14 +47,19 @@ support relationships.
 
 The complete data of the resulted KG will be disclosed in case of accepted. 
 
+## Recommendation
+[The Recommendation of ML/DL Library.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/lib_recommendation/)
+This module implements the ML/DL library recommendation. 
+It provides recommendations for libraries, filtering and sorting of results, keyword hints and calculating scores of various indicators.
+
 ## Experiments
 - [RQ1: Intrinsic Quality of Knowledge Graph.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ1/)
-    - [384 tuples in the KG.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ1/KG_tuples_for_intrinsic_quality_evaluation.xlsx)
+    - [384 Tuples in the KG.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ1/KG_tuples_for_intrinsic_quality_evaluation.xlsx)
 We randomly sample 384 tuples from the KG and ensure that each type of relationships and attributes has at least 20 tuples selected. 
 The "Start entity" represents the start node of the relation, "End entity" represents the end node of the relation, 
 "Auxiliary" is used to help annotators label easier, “Annotator_1” represents the annotation of the first annotator, “Annotator_2” 
 represents the annotator of the second annotator, "Arbitration" represents the arbitration between two annotators. 
-    - [Accuracy per tuple type.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ1/Accuracy_per_tuple_type.xlsx)
+    - [Accuracy per Tuple Type.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ1/Accuracy_per_tuple_type.xlsx)
 The statistic results of accuracy per tuple type is shown here.
 
 - [RQ2: Trends of AI Tasks and Implementations Analysis.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ2/)
