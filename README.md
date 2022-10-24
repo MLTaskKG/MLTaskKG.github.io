@@ -24,7 +24,8 @@ This json file contains the task categories we collected from PapersWithCode.
 We summarize a set of patterns for the extraction of some implementation knowledge from ReadMe files.
 These patterns involve not only linguistic patterns in the text but also the section structure, hyperlinks, and code blocks of the ReadMe file. 
 
-## KG Construction
+## Implementation
+### KG Construction Implementation
 [The Module of Knowledge Graph Construction.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/kg_construction/)
 This module is used to construct knowledge graph, including the definition of entity relation, generation of entity relation and construction of knowledge graph.
 - [The Definition of Entity Relation.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/kg_construction/entity_relation_category.py)
@@ -36,18 +37,18 @@ Based on the definition of entity relation, this code file implements the genera
 - [The Construction of Knowledge Graph.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/kg_construction/kg_constructor.py)
 Based on the entity and relation data generated in the previous step, this code file implements the construction of the knowledge graph. It mainly includes the import of various entities and relation building, and finally generates the AI task-model knowledge graph.
 
-## Resulting KG
+### Resulting KG
 The resulting AI task-model KG includes 159,310 entities and 628,045
 relationships. The entities include 17,250 tasks, 25,404 papers, 25,718
 models, 21,003 model implementations, and 24,047 repositories. The relationships 
 include 17,410 subclassOf relationships between tasks, 44,438 accomplish 
 relationships, 20,594 hasEvaluation relationships, 29,281 implement relationships, 
 21,008 provide relationships, 60,040 basedOn relationships, and 105,963
-support relationships.
+support relationships. 
 
-The complete data of the resulted KG will be disclosed in case of accepted. 
+The complete data of the resulted KG can be found [here](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/KG.rar). 
 
-## Recommendation
+### Recommendation Implementation
 [The Recommendation of ML/DL Library.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/lib_recommendation/)
 This module implements the ML/DL library recommendation. 
 It provides recommendations for libraries, filtering and sorting of results, keyword hints and calculating scores of various indicators.
