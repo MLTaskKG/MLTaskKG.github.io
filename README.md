@@ -55,8 +55,8 @@ It provides recommendations for libraries, filtering and sorting of results, key
 
 ## Experiments
 - [RQ1: Intrinsic Quality of Knowledge Graph.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ1/)
-    - [384 Tuples in the KG.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ1/KG_tuples_for_intrinsic_quality_evaluation.xlsx)
-We randomly sample 384 tuples from the KG and ensure that each type of relationships and attributes has at least 20 tuples selected. 
+    - [1632 Tuples in the KG.](https://github.com/MLTaskKG/MLTaskKG.github.io/tree/main/RQ1/KG_tuples_for_intrinsic_quality_evaluation.xlsx)
+We randomly sample 1632 tuples from the KG and ensure that each type of relationships and attributes has at least 96 tuples selected. 
 The "Start entity" represents the start node of the relation, "End entity" represents the end node of the relation, 
 "Auxiliary" is used to help annotators label easier, “Annotator_1” represents the annotation of the first annotator, “Annotator_2” 
 represents the annotator of the second annotator, "Arbitration" represents the arbitration between two annotators. 
